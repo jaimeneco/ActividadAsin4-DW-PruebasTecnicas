@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Junior</title>
+    <meta name="author" content="Jaime Nebot">
+    <link rel="stylesheet" href="./CSS/junior.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script defer src="./JS/junior.js"></script>
+
+</head>
+
+<body class="Body">
+    <header class="Header">
+        <h1>mater</h1>
+        <nav><button class="Menu-btn" id="openMenu"><span class="material-symbols-outlined">
+            menu
+            </span></button></nav>
+    </header>
+
+    <main class="Main">
+        <div data-content="Tab1" class="Tab-content isActive">
+            <div class="Product-details">
+                <h6 class="Product-author">Michael W.Dreeben</h6>
+                <h3>Shell Dining Chair</h3>
+                <p>Michael W. Dreeben</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi nesciunt facilis doloremque nam atque
+                    laboriosam fuga harum, vel quae, blanditiis dolorem optio alias, minus numquam expedita porro
+                    nostrum autem in.
+                </p>
+                <button class="Product-btn">Product Details</button>
+            </div>
+            <picture class="Product-image">
+                <img src="img/silla_negra.png" alt="Mesa negra">
+            </picture>
+
+        </div>
+
+        <div data-content="Tab2" class="Tab-content">
+            <div class="Product-details">
+                <h6 class="Product-author">Michael W.Dreeben</h6>
+                <h3>Dunes Anthrazite Black</h3>
+                <p>Michael W. Dreeben</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid, temporibus pariatur? Quos
+                    temporibus debitis molestiae inventore? Facilis neque voluptate blanditiis quam officiis, veritatis
+                    excepturi hic ipsam vero sed reprehenderit praesentium.
+                </p>
+                <button class="Product-btn">Product Details</button>
+            </div>
+            <picture class="Product-image">
+                <img src="img/mesa_negra.png" alt="Sofá blanco">
+            </picture>
+        </div>
+    </main>
+
+    <footer class="Footer">
+        <div class="Tabs">
+            <a href="#" class="Tabs-a isActive" data-tab="Tab1"> 01 Shell Dining Chair</a>
+            <a href="#" class="Tabs-a" data-tab="Tab2">02 Dunes Anthrazite Black</a>
+        </div>
+    </footer>
+
+    <!-- menu nav a pantalla completa -->
+
+    <div class="Menu-cubierto" id="menuCubierto">
+        <header class="Menu-cubiertoHeader">
+            <h1 class="Menu-cubiertoH1">mater</h1>
+            <button class="Close-btn" id="closeMenu">X</button>
+        </header>
+
+        <nav class="Menu">
+            <ul class="Menu-navs">
+                <li>
+                    <a class="Menu-nav" id="collection" href="#">Collection</a>
+                    <ul class="Menu-subMenu">
+                        <li class="Menu-subItem" id="furniture">Furniture</li>
+                        <li class="Menu-subItem">Lighting</li>
+                        <li class="Menu-subItem">Accessories</li>
+                    </ul>
+                </li>
+                <li><a class="Menu-nav" href="#">Design</a></li>
+                <li><a class="Menu-nav" href="#">Craftmanship</a></li>
+                <li><a class="Menu-nav" href="#">Ethics</a></li>
+            </ul>
+        </nav>
+
+        <div class="Menu-furniture" id="menuFurniture">
+            <img src="img/sofa_blanco.png" alt="Sillón">
+        </div>
+
+        <div class="Menu-footer">
+            <ul class="Menu-footer-list">
+                <a class="Menu-footer-links" href="#">About</a>
+                <a class="Menu-footer-links" href="#">Contact</a>
+                <a class="Menu-footer-links" href="#">Dealers</a>
+                
+            </ul>
+            <ul class="Menu-footer-list">
+                <a class="Menu-footer-links" href="#">News</a>
+                <a class="Menu-footer-links" href="#">Care</a>
+                <a class="Menu-footer-links" href="#">Press</a>
+                
+            </ul>
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

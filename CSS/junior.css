@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    width: 100vw;
+}
+
+.Header,
+.Main {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.Header {
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.Main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.Product-btn {
+    width: 7rem;
+    height: 2rem;
+    background-color: black;
+    color: #f9f9f9;
+    border: none;
+}
+
+.Product-details {
+    width: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+
+}
+
+.Product-author {
+    font-weight: 200;
+    margin-bottom: -40px;
+}
+
+
+
+/* para que funcione los botones de los muebles
+*/
+
+.Tab-content {
+    width: 100%;
+    max-width: 1200px;
+
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 1s ease, visibility 1s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.Tab-content.isActive {
+
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0%);
+}
+
+.Tabs-a.isActive {
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    border-top: 1px solid black;
+    width: 50%;
+    display: inline;
+
+}
+
+/* Footer */
+
+.Footer {
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 15vh;
+    background-color: #fdfdfc;
+
+
+
+
+}
+
+.Tabs-a {
+    text-decoration: none;
+    padding: 70px;
+    color: rgb(117, 113, 113);
+
+
+
+}
+
+/* Menú sobrepuesto */
+
+.Menu-cubierto {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 40px;
+    z-index: 10;
+    /* opacity: 0;
+    visibility: hidden; */
+    transition: left 0.8s ease-in-out;
+}
+
+.Menu-cubierto.isOpen {
+    left: 0;
+}
+
+.Menu-btn {
+    font-size: 2rem;
+    background-color: white;
+    cursor: pointer;
+}
+
+.Menu {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+
+}
+
+.Menu-navs {
+
+    list-style: none;
+}
+
+.Menu-nav {
+    font-size: 2.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 50px;
+    display: block;
+
+}
+
+.Menu-cubiertoHeader {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Menu-cubiertoH1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.Close-btn {
+    font-size: 1.8rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2 ease;
+}
+
+.Close-btn:hover {
+    transform: scale(1.1);
+}
+
+.Menu-footer {
+    display: inline-block;
+    margin-right: 20px;
+    color: #605e5e;
+    text-decoration: none;
+    font-size: 0.9rem;
+
+}
+
+.Menu-footer-list {
+    gap: 20px;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+
+
+.Menu-footer-links {
+    color: #696767;
+    text-decoration: none;
+    padding: 1rem;
+    margin: 0;
+    width: 70px;
+}
+
+.Menu-subMenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.Menu-subMenu.isVisible {
+    max-height: 200px;
+}
+
+.Menu-furniture {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Menu-furniture.isVisible {
+    display: block;
+}
+
+.Menu-subItem {
+    color: #696767;
+    padding: 0.5rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.Menu-subItem.isActive {
+    color: white;
+}
